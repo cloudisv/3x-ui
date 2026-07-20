@@ -27,9 +27,9 @@ http {
             proxy_set_header X-Forwarded-Proto $scheme;
         }
 
-        # هر مسیر دیگه (اینباند VLESS/WebSocket) به پورت داخلی 1212
+        # هر مسیر دیگه (اینباند VLESS/WebSocket) به پورت داخلی 8080
         location /isv {
-            proxy_pass http://127.0.0.1:1212;
+            proxy_pass http://127.0.0.1:8080;
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection "upgrade";
